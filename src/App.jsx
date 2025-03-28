@@ -101,6 +101,7 @@ function Form({item,setItem}){
     
   }
   function handleJumlah(e){
+   
     setJumlah(e.target.value);
     console.log(e.target.value);
     
@@ -169,8 +170,8 @@ function tambahDansimpan(e){
     <div className='w-full flex justify-center'>
 
     <input type="text" placeholder='Nama Barang' className='border-1 px-2 w-full' id='namabarang' onChange={handleInput}/>
-    <input type="number" className='border-1  h-10  px-2 w-15' min={0} id='jumlah' onChange={handleJumlah} value={1} />
-    <input  type='text' placeholder='Harga 1 barang ' className='border-1 w-full'onChange={handleHarga}  id='harga'/>
+    <input type="number" className='border-1  h-10  px-2 w-15' min={1} id='jumlah' placeholder='0' onChange={handleJumlah}  />
+    <input  type='text' placeholder='Harga 1 barang ' className='border-1 w-full 'onChange={handleHarga}  id='harga'/>
     <button className='rounded-md font-semibold  mx-2 px-2 bg-green-300' onClick={tambahDansimpan}>Tambah</button>
     </div>
     </form>
